@@ -5,10 +5,7 @@ import { Images } from '../Images/Images';
 import { Colors } from '../Styles/Colors';
 
 interface WelcomeScreenProps {
-    navigation?: any;
-
-
-    
+    navigation?: any;   
 }
 
 export const WelcomeScreen: React.FC<WelcomeScreenProps> = ({ navigation }) => {
