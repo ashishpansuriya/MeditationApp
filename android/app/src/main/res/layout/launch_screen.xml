@@ -6,15 +6,6 @@
     android:layout_gravity="center"
     android:gravity="center"
     android:backgroundTint="#FFFFF7">
-<!--    <TextView-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_gravity="center"-->
-<!--        android:layout_marginTop="20dp"-->
-<!--        android:gravity="center"-->
-<!--        android:text="Welcome"-->
-<!--        android:textColor="#504D48"-->
-<!--        android:textSize="22dp" />-->
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -27,6 +18,39 @@
             android:layout_centerInParent="true"
             android:src="@drawable/meditation" />
     </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="90dp"
+        android:gravity="center"
+        android:text="Welcome"
+        android:textStyle="bold"
+        android:textColor="#504D48"
+        android:textSize="22dp" />
+
+    <TextView
+        android:id="@+id/tv2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginBottom="90dp"
+        android:gravity="center"
+        android:layout_marginHorizontal="40dp"
+        android:layout_alignParentBottom="true"
+        android:text="Find some peace of mind to prepare for meditation."
+        android:textColor="#3F414E"
+        android:textSize="16dp" />
+
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:src="@drawable/silentmoon"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"/>
 
 
 
