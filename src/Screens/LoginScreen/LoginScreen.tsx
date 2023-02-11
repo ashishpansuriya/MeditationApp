@@ -1,10 +1,11 @@
 import React from 'react';
-import { View, Text, TouchableOpacity, Image } from 'react-native';
+import { View, Text, TouchableOpacity, Image, TextInput } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { styles } from './styles';
 import { SocialIcon } from 'react-native-elements'
 import { Colors } from '../../Styles/Colors';
 import { Images } from '../../Images/Images';
+import { metrics } from '../../Styles/metrics';
 
 
 interface LoginScreenProps {
@@ -17,19 +18,62 @@ export const LoginScreen: React.FC<LoginScreenProps> = ({ navigation }) => {
             <View >
                 <Text style={styles.WelcomeText}>Welcome Back!</Text>
 
+                <View>
+                    <TouchableOpacity
+                        style={styles.buttonFacebookStyle}
+                        activeOpacity={0.5}>
+                        <Image
+                            source={Images.faceBookIcon}
+                            style={styles.buttonImageIconStyle}
+                        />
+                        <Text style={styles.buttonTextStyle}>
+                            CONTINUE WITH FACEBOOK
+                        </Text>
+                    </TouchableOpacity>
+                </View>
+
+
                 <TouchableOpacity
-                    style={styles.buttonFacebookStyle}
+                    style={styles.buttonGoogleStyle}
                     activeOpacity={0.5}>
                     <Image
-                        source={Images.faceBookIcon}
-                        style={styles.buttonImageIconStyle}
+                        source={Images.googleIcon}
+                        style={styles.googleIcon}
                     />
-
-                    <Text style={styles.buttonTextStyle}>
-                        Login Using Facebook
+                    <Text style={styles.Text}>
+                        CONTINUE WITH GOOGLE
                     </Text>
                 </TouchableOpacity>
 
+                <Text style={styles.orLoginText}>
+                    OR LOG IN WITH EMAIL
+                </Text>
+
+                <View style={{ marginTop: metrics.hp5 }}>
+                    <TextInput placeholder='Email address' value='' style={styles.textInput} />
+                </View>
+
+
+                <View style={{ marginTop: metrics.hp5 }}>
+                    <TextInput placeholder='Email address' value='' style={styles.textInput} />
+                </View>
+
+                <View style={{ marginBottom: 20 }}>
+                    <TouchableOpacity style={styles.button} onPress={() => { }}>
+                        <Text style={styles.signUpText} >SIGN UP</Text>
+                    </TouchableOpacity>
+
+                    <Text style={styles.orLoginText}>
+                        Forgot Password?
+                    </Text>
+
+                    <View style={{ flexDirection: 'row', alignSelf: 'center', alignItems: 'center' }}>
+                        <Text style={[styles.loginTitle,]} >ALREADY HAVE AN ACCOUNT?</Text>
+                        <TouchableOpacity onPress={() => { }}>
+                            <Text style={{ color: Colors.lightBlue }}> LOG IN</Text>
+                        </TouchableOpacity>
+                    </View>
+                </View>
             </View>
         </SafeAreaView>
     )

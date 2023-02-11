@@ -6,5 +6,6 @@ export  const Images = {
     
     //Icons
     faceBookIcon : require('../ImgNav/Icons/faceBookIcon.png'),
+    googleIcon: require('../ImgNav/Icons/googleIcon.png'),
     
 }
