@@ -1,12 +1,12 @@
 import React from 'react';
 import {View} from 'react-native';
 
-interface SplashScreenProps {
+interface LoginScreenProps {
     navigation?: any;
 }
 
 
-export const SplashScreen: React.FC<SplashScreenProps> =({navigation}) => {
+export const LoginScreen: React.FC<LoginScreenProps> =({navigation}) => {
     return (
         <View>
 
@@ -14,4 +14,4 @@ export const SplashScreen: React.FC<SplashScreenProps> =({navigation}) => {
     )
 }
 
-export default SplashScreen;
+export default LoginScreen;

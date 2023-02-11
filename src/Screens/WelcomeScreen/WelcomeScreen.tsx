@@ -1,8 +1,8 @@
 import React from 'react';
 import { View, Image, Text, TouchableOpacity } from 'react-native';
 import { styles } from './styles';
-import { Images } from '../Images/Images';
-import { Colors } from '../Styles/Colors';
+import { Images } from '../../Images/Images';
+import { Colors } from '../../Styles/Colors';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
 interface WelcomeScreenProps {
@@ -14,15 +14,12 @@ export const WelcomeScreen: React.FC<WelcomeScreenProps> = ({ navigation }) => {
         <SafeAreaView style={styles.MainBG}>
             <View style={styles.MainBG}>
 
-
-
                 <View style={{ flex: 1 }}>
 
                     <View style={{ flex: 1, justifyContent: 'space-between' }}>
                         <Image source={Images.silentMoon} style={styles.imageLogo} resizeMode={'contain'} />
 
                         <Image source={Images.musicGirl} style={styles.imageBG} resizeMode={'contain'} />
-
 
                         <View>
                             <Text style={styles.Header} >We are what we do</Text>
