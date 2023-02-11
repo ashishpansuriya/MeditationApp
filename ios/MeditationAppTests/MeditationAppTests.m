@@ -7,11 +7,11 @@
 #define TIMEOUT_SECONDS 600
 #define TEXT_TO_LOOK_FOR @"Welcome to React"
 
-@interface MeditationAppTests : XCTestCase
+@interface MeditoTests : XCTestCase
 
 @end
 
-@implementation MeditationAppTests
+@implementation MeditoTests
 
 - (BOOL)findSubviewInView:(UIView *)view matching:(BOOL (^)(UIView *view))test
 {

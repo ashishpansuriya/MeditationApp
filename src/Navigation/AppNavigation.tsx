@@ -1,3 +1,4 @@
+import { LogBox } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import React from 'react';
@@ -7,11 +8,19 @@ import WelcomeScreen from '../Screens/WelcomeScreen/WelcomeScreen';
 const Stack = createNativeStackNavigator();
 
 function AppNavigation(): JSX.Element {
+
+    // Ignore log notification by message
+    LogBox.ignoreLogs(['Warning: ...']);
+
+    //Ignore all log notifications
+    LogBox.ignoreAllLogs();
+
     return (
         <NavigationContainer >
             <Stack.Navigator initialRouteName='WelcomeScreen'>
-                <Stack.Screen name="SplashScreen" component={LoginScreen} options={{headerShown: false}}/>
-                <Stack.Screen name="WelcomeScreen" component={WelcomeScreen} options={{headerShown: false}} />
+                <Stack.Screen name="SplashScreen" component={LoginScreen} options={{ headerShown: false }} />
+                <Stack.Screen name="WelcomeScreen" component={WelcomeScreen} options={{ headerShown: false }} />
+                <Stack.Screen name="LoginScreen" component={LoginScreen} options={{ headerShown: false }} />
             </Stack.Navigator>
         </NavigationContainer>
     );

@@ -1,14 +1,16 @@
 import { View, Text } from 'react-native'
 import React from 'react'
 
-type Props = {}
+interface Props {
+    
+}
 
 const CustomToolBar = (props: Props) => {
-  return (
-    <View>
-      <Text>CustomToolBar</Text>
-    </View>
-  )
+    return (
+        <View style={{}}>
+            <Text>CustomToolBar</Text>
+        </View>
+    )
 }
 
 export default CustomToolBar

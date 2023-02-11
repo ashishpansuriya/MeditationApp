@@ -1,4 +1,4 @@
-package com.meditationapp;
+package com.Medito;
 
 import android.app.Application;
 import com.facebook.react.PackageList;
