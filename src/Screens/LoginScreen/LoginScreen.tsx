@@ -6,6 +6,7 @@ import { SocialIcon } from 'react-native-elements'
 import { Colors } from '../../Styles/Colors';
 import { Images } from '../../Images/Images';
 import { metrics } from '../../Styles/metrics';
+import CustomToolBar from '../../component/CustomToolBar';
 
 
 interface LoginScreenProps {
@@ -16,9 +17,11 @@ export const LoginScreen: React.FC<LoginScreenProps> = ({ navigation }) => {
     return (
         <SafeAreaView style={styles.MainContainer}>
             <View >
+                <CustomToolBar image={Images.faceBookIcon} onPress={() => { }} />
+
                 <Text style={styles.WelcomeText}>Welcome Back!</Text>
 
-                <View>
+                <View style={styles.ButtonContainer}>
                     <TouchableOpacity
                         style={styles.buttonFacebookStyle}
                         activeOpacity={0.5}>
@@ -58,12 +61,12 @@ export const LoginScreen: React.FC<LoginScreenProps> = ({ navigation }) => {
                     <TextInput placeholder='Email address' value='' style={styles.textInput} />
                 </View>
 
-                <View style={{ marginBottom: 20 }}>
+                <View style={{ }}>
                     <TouchableOpacity style={styles.button} onPress={() => { }}>
                         <Text style={styles.signUpText} >SIGN UP</Text>
                     </TouchableOpacity>
 
-                    <Text style={styles.orLoginText}>
+                    <Text style={[styles.orLoginText,{marginBottom:metrics.hp3}]}>
                         Forgot Password?
                     </Text>
 

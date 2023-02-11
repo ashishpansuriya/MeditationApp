@@ -6,11 +6,11 @@ import { Fonts } from '../../Styles/Fonts';
 import { metrics } from '../../Styles/metrics';
 
 export const styles = StyleSheet.create({
-    MainBG: { flex: 1, backgroundColor: '#FFFFF7', alignItems: 'center' },
+    MainBG: { flex: 1, backgroundColor: Colors.backgroundColor, alignItems: 'center' },
     subView: { flex: 0.3, backgroundColor: '#000', alignItems: 'center' },
     imageBG: {  width: '90%', height: heightPercentageToDP('40%'),alignItems:'flex-start', alignSelf: 'center' },
     imageLogo: { width: '90%', height: heightPercentageToDP('7%'), alignSelf: 'center', marginTop: metrics.hp7 },
-    Header: { alignSelf: 'center', fontSize: RFValue(20), color: Colors.headerColor,  textAlign: 'center' ,fontFamily:Fonts.BoldFonts },
+    Header: { alignSelf: 'center', fontSize: RFValue(20), color: Colors.headerColor,  textAlign: 'center' ,fontFamily:'HelveticaMedium' },
     subTitle: { alignSelf: 'center', fontSize: RFValue(14), width: widthPercentageToDP('90%'), color: Colors.subtitle, textAlign: 'center',marginTop:5},
     signUpText: { alignItems: 'center', fontSize: RFValue(14), width: widthPercentageToDP('90%'), color: Colors.white, textAlign: 'center' },
     loginTitle: { alignSelf: 'center', fontSize: RFValue(12), color: Colors.subtitle, textAlign: 'center' },
