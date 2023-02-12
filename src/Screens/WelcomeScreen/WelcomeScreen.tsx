@@ -15,6 +15,9 @@ export const WelcomeScreen: React.FC<WelcomeScreenProps> = ({ navigation }) => {
         navigation.navigate('LoginScreen');
     }
 
+    function goToSignUp() {
+        navigation.navigate('SignUpScreen');
+    }
     return (
         <SafeAreaView style={styles.MainBG}>
             <View style={styles.MainBG}>
@@ -31,7 +34,7 @@ export const WelcomeScreen: React.FC<WelcomeScreenProps> = ({ navigation }) => {
                             <Text style={styles.subTitle} >Thousand of people are usign silent moon for smalls meditation</Text>
                         </View>
                         <View style={{ marginBottom: 20 }}>
-                            <TouchableOpacity style={styles.button} onPress={()=>{}}>
+                            <TouchableOpacity style={styles.button} onPress={goToSignUp}>
                                 <Text style={styles.signUpText} >SIGN UP</Text>
                             </TouchableOpacity>
 

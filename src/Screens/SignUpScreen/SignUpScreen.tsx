@@ -6,18 +6,16 @@ import { Colors } from '../../Styles/Colors';
 import { Images } from '../../Images/Images';
 import { metrics } from '../../Styles/metrics';
 import CustomToolBar from '../../component/CustomToolBar';
+import CheckBox from 'react-native-check-box'
 
-interface LoginScreenProps {
+interface SignUpScreenProps {
     navigation?: any;
 }
 
-export const LoginScreen: React.FC<LoginScreenProps> = ({ navigation }) => {
+export const SignUpScreen: React.FC<SignUpScreenProps> = ({ navigation }) => {
 
     function goBack() {
         navigation.pop();
-    }
-    function goToSignUp() {
-        navigation.navigate('SignUpScreen');
     }
 
     return (
@@ -29,7 +27,7 @@ export const LoginScreen: React.FC<LoginScreenProps> = ({ navigation }) => {
                 <View style={{ flex: 1, justifyContent: 'space-between' }}>
 
                     <View style={{ flex: 0.8, alignItems: 'flex-start', alignSelf: 'center' }}>
-                        <Text style={styles.WelcomeText}>Welcome Back!</Text>
+                        <Text style={styles.WelcomeText}>Create your account </Text>
 
                         <View style={styles.ButtonContainer}>
                             <TouchableOpacity
@@ -62,35 +60,40 @@ export const LoginScreen: React.FC<LoginScreenProps> = ({ navigation }) => {
                         </Text>
 
                         <View>
+                            <TextInput placeholder='Name' value='' style={styles.textInput} />
+                        </View>
+
+                        <View style={{ marginTop: metrics.hp4 }}>
                             <TextInput placeholder='Email address' value='' style={styles.textInput} />
                         </View>
 
                         <View style={{ marginTop: metrics.hp4 }}>
                             <TextInput placeholder='Password' value='' style={styles.textInput} />
                         </View>
-
-
                     </View>
 
-                    <View style={{ flex: 0., alignItems: 'flex-end', justifyContent: 'space-between', alignSelf: 'center' }}>
+                    <View style={{ flex: 0.3, alignItems: 'flex-end', justifyContent: 'space-between', alignSelf: 'center' }}>
                         <View>
+
+                            <TouchableOpacity onPress={() => { }} style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center' }} >
+                                <Text style={[styles.orForgotText, { color: Colors.black, marginTop: 0 }]}>
+                                    I have read the <Text style={{ color: Colors.lightBlue }} onPress={() => { }} >Privace Policy</Text>
+                                </Text>
+
+                                <CheckBox
+                                    isChecked={false}
+                                    onClick={() => { }}
+                                    checkedCheckBoxColor={Colors.lightBlue}
+                                    style={styles.checkbox}
+                                />
+                            </TouchableOpacity>
+
                             <TouchableOpacity style={styles.button} onPress={() => { }}>
                                 <Text style={styles.signUpText} >LOG IN</Text>
                             </TouchableOpacity>
 
-                            <TouchableOpacity onPress={() => { }} style={{ alignSelf: 'center' }} >
-                                <Text style={[styles.orForgotText, { color: Colors.black }]}>
-                                    Forgot Password?
-                                </Text>
-                            </TouchableOpacity>
                         </View>
 
-                        <View style={{ flexDirection: 'row', alignSelf: 'center', alignItems: 'flex-end', marginBottom: metrics.hp6 }}>
-                            <Text style={[styles.loginTitle, {}]} >DON'T HAVE AN ACCOUNT?</Text>
-                            <TouchableOpacity onPress={goToSignUp}>
-                                <Text style={{ color: Colors.lightBlue }}> SIGN UP</Text>
-                            </TouchableOpacity>
-                        </View>
                     </View>
                 </View>
             </View>
@@ -98,4 +101,4 @@ export const LoginScreen: React.FC<LoginScreenProps> = ({ navigation }) => {
     )
 }
 
-export default LoginScreen;
+export default SignUpScreen;
