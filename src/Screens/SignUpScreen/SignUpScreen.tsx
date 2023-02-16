@@ -18,6 +18,10 @@ export const SignUpScreen: React.FC<SignUpScreenProps> = ({ navigation }) => {
         navigation.pop();
     }
 
+    function goToWelcomeAskScreen() {
+        navigation.navigate('WelcomeAskScreen');
+    }
+
     return (
         <SafeAreaView style={styles.MainContainer}>
             <View style={{ flex: 1, }}  >
@@ -88,12 +92,10 @@ export const SignUpScreen: React.FC<SignUpScreenProps> = ({ navigation }) => {
                                 />
                             </TouchableOpacity>
 
-                            <TouchableOpacity style={styles.button} onPress={() => { }}>
+                            <TouchableOpacity style={styles.button} onPress={goToWelcomeAskScreen   }>
                                 <Text style={styles.signUpText} >LOG IN</Text>
                             </TouchableOpacity>
-
                         </View>
-
                     </View>
                 </View>
             </View>
