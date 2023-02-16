@@ -19,6 +19,7 @@ export const LoginScreen: React.FC<LoginScreenProps> = ({ navigation }) => {
     function goToSignUp() {
         navigation.navigate('SignUpScreen');
     }
+    
 
     return (
         <SafeAreaView style={styles.MainContainer}>
