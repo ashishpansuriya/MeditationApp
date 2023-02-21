@@ -203,7 +203,7 @@ const MeditationTime = (props: MeditationTimeProps) => {
         <View style={{justifyContent: 'center', marginTop: metrics.hp2}}>
           <CustomButton
             onpress={() => {
-              props.navigation.navigate('MeditationTime');
+              props.navigation.navigate('HomeScreen');
             }}
             text={'SAVE'}
             color={Colors.lightBlue}
