@@ -1,7 +1,7 @@
 export const Fonts ={
-    MediumFonts :'HelveticaMedium',
-    BoldFonts :'HelveticaBold',
-    LightFonts :'HelveticaLight',
-    UltraLightFonts :'HelveticaUltraLight',
+    MediumFonts :'NeueMontreal-Medium',
+    BoldFonts :'NeueMontreal-Bold',
+    LightFonts :'NeueMontreal-Light',
+    UltraLightFonts :'NeueMontreal-Regular',
 
 }

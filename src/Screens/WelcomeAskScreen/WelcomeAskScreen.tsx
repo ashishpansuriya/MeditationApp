@@ -7,7 +7,9 @@ import {Colors} from '../../Styles/Colors';
 import {SafeAreaView} from 'react-native-safe-area-context';
 import CustomButton from '../../component/CustomButton/CustomButton';
 
-interface WelcomeAskScreenProps {}
+interface WelcomeAskScreenProps {
+  navigation: any;
+}
 
 const WelcomeAskScreen = (props: WelcomeAskScreenProps) => {
   return (
@@ -34,7 +36,9 @@ const WelcomeAskScreen = (props: WelcomeAskScreenProps) => {
             </View>
             <View style={{marginBottom: metrics.hp7}}>
               <CustomButton
-                onpress={() => {}}
+                onpress={() => {
+                  props.navigation.navigate('MeditationTime');
+                }}
                 text={'GET STARTED'}
                 color={Colors.white}
               />

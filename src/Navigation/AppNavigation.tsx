@@ -6,6 +6,7 @@ import LoginScreen from '../Screens/LoginScreen/LoginScreen';
 import WelcomeScreen from '../Screens/WelcomeScreen/WelcomeScreen';
 import SignUpScreen from '../Screens/SignUpScreen/SignUpScreen';
 import WelcomeAskScreen from '../Screens/WelcomeAskScreen/WelcomeAskScreen';
+import MeditationTime from '../Screens/MeditationSetTime/MeditationTime';
 
 const Stack = createNativeStackNavigator();
 
@@ -42,6 +43,11 @@ function AppNavigation(): JSX.Element {
         <Stack.Screen
           name="WelcomeAskScreen"
           component={WelcomeAskScreen}
+          options={{headerShown: false}}
+        />
+        <Stack.Screen
+          name="MeditationTime"
+          component={MeditationTime}
           options={{headerShown: false}}
         />
       </Stack.Navigator>

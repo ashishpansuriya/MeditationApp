@@ -8,4 +8,6 @@ export const Colors = {
     backgroundColor: '#FFFFF7',
     lightBlue: '#8E97FD',
     lightWhite: '#F2F3F7',
+    E5Color: '#E5E5E5',
+    F5Color: '#F5F5F9',
 }
